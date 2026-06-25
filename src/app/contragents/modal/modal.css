@@ -1,0 +1,9 @@
+.modal-error {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #b45151;
+}
+
+.modal-input.modal-input--invalid {
+  border-color: #b45151;
+}

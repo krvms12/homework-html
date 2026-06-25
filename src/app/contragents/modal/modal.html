@@ -1,0 +1,83 @@
+<div
+  id="contragentModal"
+  tabindex="-1"
+  aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full bg-gray-900/50"
+>
+  <div class="relative w-full max-w-[448px] p-4">
+    <div class="relative bg-white rounded-lg pb-5" style="box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);">
+
+      <div class="flex items-center px-5 h-[55px] border-b border-[#E5E7EB]">
+        <h3 class="text-xl font-semibold text-[#111827]">Контрагент</h3>
+      </div>
+
+      <div class="px-5 pt-5">
+        <form id="contragentForm" class="flex flex-col gap-4" novalidate>
+
+          <div class="flex flex-col gap-2">
+            <label for="contragentName" class="text-sm font-medium text-[#111827]">Наименование</label>
+            <input
+              type="text"
+              id="contragentName"
+              name="name"
+              class="modal-input bg-[#F9FAFB] border border-[#D1D5DB] text-[#111827] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
+            />
+            <p id="contragentNameError" class="modal-error hidden"></p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="contragentInn" class="text-sm font-medium text-[#111827]">ИНН</label>
+            <input
+              type="text"
+              id="contragentInn"
+              name="inn"
+              maxlength="11"
+              inputmode="numeric"
+              class="modal-input bg-[#F9FAFB] border border-[#D1D5DB] text-[#111827] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
+            />
+            <p id="contragentInnError" class="modal-error hidden"></p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="contragentAddress" class="text-sm font-medium text-[#111827]">Адрес</label>
+            <input
+              type="text"
+              id="contragentAddress"
+              name="address"
+              class="modal-input bg-[#F9FAFB] border border-[#D1D5DB] text-[#111827] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
+            />
+            <p id="contragentAddressError" class="modal-error hidden"></p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="contragentKpp" class="text-sm font-medium text-[#111827]">КПП</label>
+            <input
+              type="text"
+              id="contragentKpp"
+              name="kpp"
+              maxlength="9"
+              inputmode="numeric"
+              class="modal-input bg-[#F9FAFB] border border-[#D1D5DB] text-[#111827] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
+            />
+            <p id="contragentKppError" class="modal-error hidden"></p>
+          </div>
+
+          <div class="flex gap-3 pt-1">
+            <button
+              type="submit"
+              id="contragentSaveBtn"
+              class="flex-1 h-10 text-white bg-[#1A56DB] hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >Сохранить</button>
+            <button
+              type="button"
+              id="contragentCancelBtn"
+              class="flex-1 h-10 text-[#374151] bg-white border border-[#D1D5DB] hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            >Отменить</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
