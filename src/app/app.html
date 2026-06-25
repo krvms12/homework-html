@@ -1,1 +1,163 @@
-<h1>Creating the Future...</h1>
+<!-- Header -->
+<header class="bg-white fixed top-0 left-0 right-0 z-10">
+  <div class="max-w-[1017px] mx-auto px-4 h-[66px] flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="208" height="32" fill="none" data-darkreader-inline-invert=""><path fill="#2855AF" d="M149.88 18.312h1.505L151.292 24h-3.729v-2.376h-6.099L141.398 24h-3.755v-5.688h1.305c.653-1.914.971-3.773.971-7.818v-.57h9.961zM40.353 6.435c.027.059 2.294 5.028 2.742 5.986.45.955.963 2.178.972 2.199.002-.006.668-1.59 1-2.267s2.678-5.861 2.703-5.918h2.65l2.85 15.19h-4.035l-1.306-7.411-3.634 7.913h-.467L40.18 14.28l-1.304 7.344h-4.01l2.85-15.19zm20.095 3.23c3.66 0 6.312 2.756 6.312 6.123 0 3.325-2.663 6.122-6.352 6.122-3.675 0-6.326-2.755-6.327-6.122 0-3.325 2.678-6.122 6.367-6.122m29.854-3.487c2.81 0 4.861 1.248 6.313 3.365l-3.05 2.267c-.814-1.153-1.785-1.697-3.077-1.697-2.17 0-3.675 1.739-3.675 3.91 0 2.39 1.571 3.937 3.582 3.937 1.412 0 2.385-.626 3.196-1.82l3.103 2.308c-1.478 2.037-3.343 3.462-6.592 3.462-4.315 0-7.617-3.271-7.617-7.887 0-4.303 3.277-7.845 7.817-7.845m38.324 3.488c1.745 0 2.757.801 3.503 1.684V9.924h4.022v11.7h-4.022v-1.56c-.786.977-1.758 1.819-3.476 1.819-2.743 0-5.1-2.307-5.1-6.095 0-3.801 2.358-6.122 5.073-6.122m-26.765 4.764 3.076-4.506h4.647l-4.1 5.32 4.207 6.244.186-3.596c.44.054.547.054.653.054.72 0 1.464-.53 1.478-5.77l.027-2.252h9.881v11.7h-4.035v-8.43h-2.316v.367c-.121 7.072-1.666 8.213-4.104 8.213-.386 0-1.144-.067-1.65-.15h-4.78l-3.17-4.995v4.996h-4.022V9.924h4.022zm-29.496-.746c0 .584 0 1.425-.014 2.13l3.836-5.89h3.715v11.7H76V17.81c0-.732 0-1.412.012-2.077l-3.834 5.89h-3.716v-11.7h3.902zm57.513-.583c-1.318 0-2.357 1.086-2.357 2.702 0 1.546 1.039 2.645 2.357 2.645 1.291 0 2.33-1.099 2.33-2.687 0-1.547-1.039-2.66-2.33-2.66m-69.47.081c-1.464 0-2.397 1.168-2.397 2.606 0 1.41 1.012 2.606 2.438 2.606 1.464 0 2.396-1.17 2.396-2.606 0-1.41-1.025-2.606-2.437-2.606m83.148.204a17.1 17.1 0 0 1-.786 4.926h3.063v-5.118h-2.277zM78.623 5.974c-.32 2.05-1.624 3.23-4.341 3.23-2.73 0-4.02-1.18-4.34-3.23l3.076-.449c.147.774.519 1.263 1.264 1.263.746 0 1.119-.489 1.265-1.263z"></path><path fill="#64CDFF" fill-rule="evenodd" d="M4.01 22.032c3.66 0 6.427-4.858 8.909-10.16 1.192-2.572 2.306-5.267 3.42-7.55C17.56 1.788 18.816 0 20.349 0c1.302 0 2.527 1.071 3.744 2.75 2.526 3.482 4.709 9.382 4.709 13.251 0 3.242-1.637 6.03-4.991 6.03z" clip-rule="evenodd"></path><path fill="#2855AF" fill-rule="evenodd" d="M12.919 11.87c-2.514-5.166-3.652-8.957-5.877-8.957-1.38 0-2.936 1.477-4.346 3.898C1.186 9.38 0 13.004 0 16.904c0 3.08 1.478 5.127 4.01 5.127 3.661 0 6.429-4.857 8.909-10.16" clip-rule="evenodd"></path></svg>
+    </a>
+
+    <!-- Add data button -->
+    <button
+      type="button"
+      data-modal-target="addTransactionModal"
+      data-modal-toggle="addTransactionModal"
+      class="inline-flex items-center gap-2 px-[14px] py-[7px] bg-[#1A56DB] text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+      </svg>
+      Add data
+    </button>
+  </div>
+</header>
+
+<!-- Main content -->
+<main class="mt-[66px] mb-[52px] overflow-auto">
+  <div class="max-w-[1017px] mx-auto">
+    <div class="relative overflow-x-auto">
+      <table class="w-full text-sm text-left">
+        <thead class="bg-[#F9FAFB]">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Transaction</th>
+            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Date &amp; Time</th>
+            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Amount</th>
+            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
+            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>Bonnie Green</strong></td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 23, 2021</td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$2300</strong></td>
+            <td class="px-6 py-0">
+              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
+            </td>
+          </tr>
+          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
+            <td class="px-6 py-0 text-sm text-[#111827]">Payment refund to <strong>#00910</strong></td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 23, 2021</td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>-$670</strong></td>
+            <td class="px-6 py-0">
+              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
+            </td>
+          </tr>
+          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
+            <td class="px-6 py-0 text-sm text-[#111827]">Payment failed from <strong>#087651</strong></td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 18, 2021</td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$234</strong></td>
+            <td class="px-6 py-0">
+              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#B45151] bg-[#FDE8E8]">Cancelled</span>
+            </td>
+          </tr>
+          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
+            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>Lara Byrd</strong></td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 15, 2021</td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$5000</strong></td>
+            <td class="px-6 py-0">
+              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#8967CD] bg-[#EEECFE]">In progress</span>
+            </td>
+          </tr>
+          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
+            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>Jese Leos</strong></td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 15, 2021</td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$2300</strong></td>
+            <td class="px-6 py-0">
+              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
+            </td>
+          </tr>
+          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
+            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>THEMSBERG LLC</strong></td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 11, 2021</td>
+            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$560</strong></td>
+            <td class="px-6 py-0">
+              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="fixed bottom-0 left-0 right-0 h-[52px] flex items-center justify-center">
+  <div class="card-shadow bg-white rounded-lg h-[52px] flex items-center px-4">
+    <p class="text-sm text-[#6B7280] text-center whitespace-nowrap">© 2007-2024 ООО "Логнекс"</p>
+  </div>
+</footer>
+
+<!-- Add data Modal (Flowbite) -->
+<div
+  id="addTransactionModal"
+  tabindex="-1"
+  aria-hidden="true"
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full bg-gray-900/50"
+>
+  <div class="relative w-full max-w-[448px] p-4">
+    <div class="card-shadow relative bg-white rounded-lg pb-5">
+
+      <!-- Modal header -->
+      <div class="flex items-center justify-between px-5 h-[55px] border-b border-[#E5E7EB]">
+        <h3 class="text-xl font-semibold text-[#111827]">Add data</h3>
+        <button
+          type="button"
+          data-modal-hide="addTransactionModal"
+          class="text-[#9CA3AF] bg-transparent hover:bg-gray-100 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
+        >
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 14 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+          </svg>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="px-5 pt-5">
+        <form class="flex flex-col gap-4">
+
+          <div class="flex flex-col gap-2">
+            <label for="txName" class="text-sm font-medium text-[#111827]">Transaction</label>
+            <input
+              type="text"
+              id="txName"
+              placeholder="My transaction"
+              class="bg-[#F9FAFB] border border-[#D1D5DB] text-[#6B7280] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="txAmount" class="text-sm font-medium text-[#111827]">Amount</label>
+            <input
+              type="number"
+              id="txAmount"
+              placeholder="2300"
+              min="0"
+              class="bg-[#F9FAFB] border border-[#D1D5DB] text-[#6B7280] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full h-10 text-white bg-[#1A56DB] hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          >
+            Add
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
