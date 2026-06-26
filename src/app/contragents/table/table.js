@@ -48,7 +48,8 @@ export function createTable(container, { onEdit, onDelete }) {
     });
 
     tbody.querySelectorAll('.contragent-row').forEach((row) => {
-      row.addEventListener('dblclick', () => {
+      row.addEventListener('dblclick', (event) => {
+        event.stopPropagation();
         onEdit(Number(row.dataset.id));
       });
     });

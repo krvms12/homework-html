@@ -3,30 +3,44 @@ import template from './modal.html';
 import './modal.css';
 
 const FIELD_CONFIG = [
-  { name: 'name', inputId: 'contragentName', errorId: 'contragentNameError', message: 'Укажите наименование' },
-  { name: 'inn', inputId: 'contragentInn', errorId: 'contragentInnError', message: 'ИНН должен содержать 11 цифр' },
-  { name: 'address', inputId: 'contragentAddress', errorId: 'contragentAddressError', message: 'Укажите адрес' },
-  { name: 'kpp', inputId: 'contragentKpp', errorId: 'contragentKppError', message: 'КПП должен содержать 9 цифр' },
+  {
+    name: 'name',
+    inputId: 'contragentName',
+    errorId: 'contragentNameError',
+    message: 'Укажите наименование',
+    isValid: (value) => value.trim() !== '',
+  },
+  {
+    name: 'inn',
+    inputId: 'contragentInn',
+    errorId: 'contragentInnError',
+    message: 'ИНН должен содержать 11 цифр',
+    isValid: (value) => /^\d{11}$/.test(value),
+  },
+  {
+    name: 'address',
+    inputId: 'contragentAddress',
+    errorId: 'contragentAddressError',
+    message: 'Укажите адрес',
+    isValid: (value) => value.trim() !== '',
+  },
+  {
+    name: 'kpp',
+    inputId: 'contragentKpp',
+    errorId: 'contragentKppError',
+    message: 'КПП должен содержать 9 цифр',
+    isValid: (value) => /^\d{9}$/.test(value),
+  },
 ];
 
 function validateForm(values) {
   const errors = {};
 
-  if (!values.name.trim()) {
-    errors.name = 'Укажите наименование';
-  }
-
-  if (!/^\d{11}$/.test(values.inn)) {
-    errors.inn = 'ИНН должен содержать 11 цифр';
-  }
-
-  if (!values.address.trim()) {
-    errors.address = 'Укажите адрес';
-  }
-
-  if (!/^\d{9}$/.test(values.kpp)) {
-    errors.kpp = 'КПП должен содержать 9 цифр';
-  }
+  FIELD_CONFIG.forEach(({ name, message, isValid }) => {
+    if (!isValid(values[name] ?? '')) {
+      errors[name] = message;
+    }
+  });
 
   return errors;
 }
@@ -37,12 +51,18 @@ export function createModal(container, { onSave, onCancel }) {
   const modalElement = container.querySelector('#contragentModal');
   const form = container.querySelector('#contragentForm');
   const cancelButton = container.querySelector('#contragentCancelBtn');
+
+  let editingId = null;
+
   const modal = new Modal(modalElement, {
     backdrop: 'dynamic',
     closable: true,
-  });
 
-  let editingId = null;
+    onHide: () => {
+      editingId = null;
+      clearErrors();
+    },
+  });
 
   const inputs = {
     name: container.querySelector('#contragentName'),
@@ -100,8 +120,6 @@ export function createModal(container, { onSave, onCancel }) {
 
   function close() {
     modal.hide();
-    editingId = null;
-    clearErrors();
   }
 
   form.addEventListener('submit', (event) => {

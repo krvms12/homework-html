@@ -53,7 +53,7 @@ const table = createTable(tableContainer, {
 
 const modal = createModal(modalContainer, {
   onSave(data) {
-    if (data.id) {
+    if (data.id != null) {
       contragents = contragents.map((item) => (
         item.id === data.id
           ? { ...item, name: data.name, inn: data.inn, address: data.address, kpp: data.kpp }
