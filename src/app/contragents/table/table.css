@@ -1,0 +1,7 @@
+.contragent-row {
+  cursor: pointer;
+}
+
+.contragent-row:hover {
+  background-color: #f9fafb;
+}

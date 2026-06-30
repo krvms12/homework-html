@@ -8,15 +8,14 @@
 
     <!-- Add data button -->
     <button
+      id="addContragentBtn"
       type="button"
-      data-modal-target="addTransactionModal"
-      data-modal-toggle="addTransactionModal"
       class="inline-flex items-center gap-2 px-[14px] py-[7px] bg-[#1A56DB] text-white text-sm font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
       <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
       </svg>
-      Add data
+      Добавить
     </button>
   </div>
 </header>
@@ -24,68 +23,7 @@
 <!-- Main content -->
 <main class="mt-[66px] mb-[52px] overflow-auto">
   <div class="max-w-[1017px] mx-auto">
-    <div class="relative overflow-x-auto">
-      <table class="w-full text-sm text-left">
-        <thead class="bg-[#F9FAFB]">
-          <tr>
-            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Transaction</th>
-            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Date &amp; Time</th>
-            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Amount</th>
-            <th scope="col" class="px-6 py-3 text-xs font-bold uppercase text-[#374151] tracking-wide">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
-            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>Bonnie Green</strong></td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 23, 2021</td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$2300</strong></td>
-            <td class="px-6 py-0">
-              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
-            </td>
-          </tr>
-          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
-            <td class="px-6 py-0 text-sm text-[#111827]">Payment refund to <strong>#00910</strong></td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 23, 2021</td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>-$670</strong></td>
-            <td class="px-6 py-0">
-              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
-            </td>
-          </tr>
-          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
-            <td class="px-6 py-0 text-sm text-[#111827]">Payment failed from <strong>#087651</strong></td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 18, 2021</td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$234</strong></td>
-            <td class="px-6 py-0">
-              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#B45151] bg-[#FDE8E8]">Cancelled</span>
-            </td>
-          </tr>
-          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
-            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>Lara Byrd</strong></td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 15, 2021</td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$5000</strong></td>
-            <td class="px-6 py-0">
-              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#8967CD] bg-[#EEECFE]">In progress</span>
-            </td>
-          </tr>
-          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
-            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>Jese Leos</strong></td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 15, 2021</td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$2300</strong></td>
-            <td class="px-6 py-0">
-              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
-            </td>
-          </tr>
-          <tr class="bg-white border-b border-[#E5E7EB] h-[55px]">
-            <td class="px-6 py-0 text-sm text-[#111827]">Payment from <strong>THEMSBERG LLC</strong></td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]">Apr 11, 2021</td>
-            <td class="px-6 py-0 text-sm text-[#6B7280]"><strong>$560</strong></td>
-            <td class="px-6 py-0">
-              <span class="inline-block px-1.5 rounded-[5px] text-sm font-normal text-[#006400] bg-[#8FBC8F]">Completed</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <div id="contragents-table"></div>
   </div>
 </main>
 
@@ -97,67 +35,4 @@
 </footer>
 
 <!-- Add data Modal (Flowbite) -->
-<div
-  id="addTransactionModal"
-  tabindex="-1"
-  aria-hidden="true"
-  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full h-full bg-gray-900/50"
->
-  <div class="relative w-full max-w-[448px] p-4">
-    <div class="card-shadow relative bg-white rounded-lg pb-5">
-
-      <!-- Modal header -->
-      <div class="flex items-center justify-between px-5 h-[55px] border-b border-[#E5E7EB]">
-        <h3 class="text-xl font-semibold text-[#111827]">Add data</h3>
-        <button
-          type="button"
-          data-modal-hide="addTransactionModal"
-          class="text-[#9CA3AF] bg-transparent hover:bg-gray-100 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
-        >
-          <svg class="w-3 h-3" fill="none" viewBox="0 0 14 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-          </svg>
-          <span class="sr-only">Close</span>
-        </button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="px-5 pt-5">
-        <form class="flex flex-col gap-4">
-
-          <div class="flex flex-col gap-2">
-            <label for="txName" class="text-sm font-medium text-[#111827]">Transaction</label>
-            <input
-              type="text"
-              id="txName"
-              placeholder="My transaction"
-              class="bg-[#F9FAFB] border border-[#D1D5DB] text-[#6B7280] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
-              required
-            />
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="txAmount" class="text-sm font-medium text-[#111827]">Amount</label>
-            <input
-              type="number"
-              id="txAmount"
-              placeholder="2300"
-              min="0"
-              class="bg-[#F9FAFB] border border-[#D1D5DB] text-[#6B7280] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-[10px] py-[11px] h-[42px]"
-              required
-            />
-          </div>
-
-          <button
-            type="submit"
-            class="w-full h-10 text-white bg-[#1A56DB] hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          >
-            Add
-          </button>
-
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
+<div id="contragents-modal"></div>
